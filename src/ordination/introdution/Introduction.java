@@ -6,11 +6,9 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Introduction {
-
     public static List<Product> filterNonNull(Product[] products) {
         return Arrays.stream(products).filter(Objects::nonNull).collect(Collectors.toList());
     }
-
     public static int searchCheaper(int[] numbers, int initial, int finish) {
         int cheaper = initial;
         for (int actual = initial; actual < finish; actual++) {

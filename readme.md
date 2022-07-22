@@ -37,5 +37,8 @@
 <p>Arrays.sort usa dual-pivô QuickSort em tipos primitivos</p>
 <p>Para coleções, sort, usa uma modificação do merge sort (Tim Sort)</p>
 <p>Tim Sort é um algoritmo híbrido que usa merge sort e insertion sort, atualmente é default em linguagens como <b>Java</b> e <b>Python</b></p>
+<h3>Hash Map</h3>
+<p>Hash Map é uma estrutura de dados que permite realizar buscas com eficiência e de tempo constante</p>
+<p>Esta estrutura usa o método hashCode() de keys para devolver os valores de forma mais eficiente</p>
 
 
