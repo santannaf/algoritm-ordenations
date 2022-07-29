@@ -46,8 +46,17 @@
 
 <p><i><u>Selection Sort</u></i></p>
 <p>Pior caso</p>
-<p> - O pior caso irá acontecer quando tempos </p>
-<p>Melhor caso</p>
-<p></p>
+<p> - Buscar o menor elemento na primeira iteração custa (n - 1) passos, na segunda iteração custa (n - 2) e assim por diante. A soma de termos de uma PA</p>
 
+<p><i><u>Bubble Sort</u></i></p>
+<p>Pior caso</p>
+<p> - O pior caso irá acontecer quando o vetor está ordenado de forma decrescente</p>
+<p>Melhor caso</p>
+<p> - Ocorre quando o vetor está ordenado </p>
+
+<p><i><u>Quick Sort</u></i></p>
+<p>Pior caso</p>
+<p> - O pior caso irá acontecer quando o pivô dividi o array em tamanhos diferentes, 0 e (n - 1) elementos</p>
+<p>Melhor caso</p>
+<p> - O melhor caso acontece quando as partições têm sempre o mesmo tamanho</p>
 
