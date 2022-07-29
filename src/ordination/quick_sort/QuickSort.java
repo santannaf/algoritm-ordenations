@@ -3,7 +3,6 @@ package ordination.quick_sort;
 import ordination.introdution.Introduction;
 
 import java.util.Arrays;
-import java.util.Enumeration;
 
 public class QuickSort {
     public static void startQuickSort(int[] numbers, int init, int finish) {
@@ -35,20 +34,12 @@ public class QuickSort {
             if (v[i] <= pivot) i++;
             else if (v[j] > pivot) j--;
             else {
-
                 Introduction.swap(v, i, j);
-//                int aux = v[i];
-//                v[i] = v[j];
-//                v[j] = aux;
                 i++;
                 j--;
             }
         }
         Introduction.swap(v, i, finish);
-//
-//        int aux = v[i];
-//        v[i] = v[finish];
-//        v[finish] = aux;
         return i;
     }
 }

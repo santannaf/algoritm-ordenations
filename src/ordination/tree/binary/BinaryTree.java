@@ -15,6 +15,12 @@ public class BinaryTree {
         this.root = new Node(data);
     }
 
+    public BinaryTree(Node node) {
+        if (node != null) this.root = node;
+    }
+
+    public BinaryTree() {}
+
     public void posOrderTraversal(Node node) {
         if (node == null) {
             node = this.root;

@@ -42,3 +42,12 @@
 <p>Esta estrutura usa o método hashCode() de keys para devolver os valores de forma mais eficiente</p>
 
 
+<h3>Detalhamento das complexidades</h3>
+
+<p><i><u>Selection Sort</u></i></p>
+<p>Pior caso</p>
+<p> - O pior caso irá acontecer quando tempos </p>
+<p>Melhor caso</p>
+<p></p>
+
+

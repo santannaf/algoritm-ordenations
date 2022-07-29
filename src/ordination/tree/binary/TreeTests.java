@@ -2,23 +2,13 @@ package ordination.tree.binary;
 
 import ordination.tree.Node;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class TreeTests {
     public static void main(String[] args) {
-
-        //        int[] numbers = new int[3];
-//        for (int i = 0; i < 3; i++) {
-//            int number = ThreadLocalRandom.current().nextInt(1, 10);
-//            numbers[i] = number;
-//        }
-//        System.out.println(Arrays.toString(numbers));
-
-        int number = ThreadLocalRandom.current().nextInt(100, 105);
-        var tree = new BinaryTree(number);
+        int n = ThreadLocalRandom.current().nextInt(100, 105);
+        var tree = new BinaryTree(n);
 
         tree.root.left = new Node(18);
         tree.root.left.left = new Node(8);
@@ -56,6 +46,60 @@ public class TreeTests {
 
         int height = tree.height(null);
         System.out.println("Altura da arvore é: " + height);
+        System.out.println();
+
+        System.out.println("=======================================================================");
+        System.out.println("===== Árvore de busca binária =====");
+
+        int[] numbers = new int[12];
+
+        var random = new Random();
+        random.setSeed(77);
+
+        for (int i = 0; i < 12; i++) {
+            int number = random.nextInt(50);;
+            numbers[i] = number;
+        }
+
+        System.out.println("Array gerado automaticamente: " + Arrays.toString(numbers));
+
+        var binaryTreeSearch = new BinarySearchTree();
+        for (Integer i : numbers) {
+            binaryTreeSearch.insert(i);
+        }
+
+        binaryTreeSearch.simetricTraversal(null);
+        System.out.print(" >>> Simétrico percurso");
+        System.out.println();
+
+        int[] forSearch = {4, 60, 40, 22, 14, 63, 98, 30, 31};
+
+        for (int i : forSearch) {
+            var x = binaryTreeSearch.search(i, binaryTreeSearch.root);
+            if (x == null) System.out.printf("%s não encontrado", i);
+            else System.out.printf("%s encontrado", i);
+            System.out.println();
+        }
+
+        List<Integer> list2 = new ArrayList<>();
+        binaryTreeSearch.borderLeftView(binaryTreeSearch.root.left, 1, list2);
+        Collections.reverse(list2); // OPERAÇÃO CONSTANTE, SOMENTE FAZ A TROCA DE POSIÇÃO DOS ELEMENTOS
+        tree.maxLevel = 0;
+        binaryTreeSearch.borderRightView(binaryTreeSearch.root, 1, list2);
+
+        System.out.println("O maior elemento é: " + list2.get(list2.size() - 1));
+        System.out.println("O menor elemento é: " + list2.get(0));
+        System.out.println();
+
+        var min = binaryTreeSearch.min(null);
+        var max = binaryTreeSearch.max(null);
+        System.out.println("O mínimo é: " + min.data);
+        System.out.println("O máximo é: " + max.data);
+        System.out.println();
+
+        int v = 27;
+        binaryTreeSearch.remove(v, null);
+        binaryTreeSearch.levelOrderTraversal(null);
         System.out.println();
 
     }
